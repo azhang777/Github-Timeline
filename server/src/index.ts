@@ -6,7 +6,8 @@ import compression from "compression";
 import cors from "cors";
 import mongoose from "mongoose";
 import "dotenv/config";
-import router from "./router";
+import router from "router";
+import { Octokit } from "@octokit/rest";
 
 //console.log(process.env);
 
