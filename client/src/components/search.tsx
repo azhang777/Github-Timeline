@@ -1,24 +1,35 @@
 "use client";
 
+import { ChangeEvent, FormEvent } from "@/types/event";
 import Button from "./button";
 
 export default function Search() {
+  function handleSubmit(e: ChangeEvent) {
+    e.preventDefault();
+    console.log(e);
+  }
   return (
-    <form className="w-2/3" action="">
-      <label htmlFor="search-git-user" className="sr-only"></label>
-      <div className="relative flex justify-center rounded-lg shadow-sm">
+    <form
+      className="w-2/3"
+      action=""
+      autoComplete="off"
+      onSubmit={(e) => handleSubmit(e.target.VA`  LUE `)}
+    >
+      <label htmlFor="search-git-user" className="sr-only">
+        Search Github User
+      </label>
+      <div className="relative flex justify-center shadow-sm">
         <input
           type="text"
           id="search-git-user"
           name="search-git-user"
-          className="min-w-xl block w-6/12 rounded-s-lg p-4 text-center text-sm focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+          className="block w-6/12 rounded-full p-4 text-center text-sm focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
           placeholder="Search Github User"
         />
 
         <Button
-          type="button"
-          className="inline-flex rounded-s-none border border-transparent disabled:pointer-events-none"
-          ty-50
+          type="submit"
+          className="inline-flex border border-transparent disabled:pointer-events-none"
         >
           Search
         </Button>
@@ -34,7 +45,7 @@ export default function Search() {
         <label
           htmlFor="hs-trailing-button-add-on-with-icon-and-button"
           className="sr-only"
-        >
+        >1  
           Label
         </label>
         <div className="relative flex rounded-lg shadow-sm">

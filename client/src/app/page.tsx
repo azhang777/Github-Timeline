@@ -1,19 +1,84 @@
 import Image from "next/image";
-import Search from "./components/search";
-import Button from "./components/button";
-
+import Search from "../components/search";
+import Button from "../components/button";
+import githubIcon from "../../public/github-mark-white.png";
+import Link from "next/link";
+import { Wrapper } from "@/components/wrapper";
 export default function Home() {
-  return (
-    <main>
-      <header className="flex justify-around p-10">
-        <Image src={""} width={40} height={40} alt="test image" />
-        <Search />
-        <Button className="px-10">Sign In</Button>
-      </header>
-    </main>
+  //localhost:3000/start
+  http: return (
+    <div>
+      {/*Mobile View */}
+      <div className="block md:hidden">
+        <div className="flex min-h-screen md:hidden">
+          <div className="w-2/6 flex-none bg-black">
+            <Wrapper margin="2" backgroundColor="stone-900"></Wrapper>
+          </div>
+          <div className="flex-grow bg-black">
+            <Wrapper margin="2" backgroundColor="stone-900"></Wrapper>
+          </div>
+        </div>
+      </div>
+      {/*Desktop View */}
+      <div className="hidden md:block">
+        <div className="flex min-h-screen">
+          <div className="w-1/6 flex-none bg-black">
+            <Wrapper margin="2" backgroundColor="stone-900"></Wrapper>
+          </div>
+          <div className="flex-grow bg-black">
+            <Wrapper margin="2" backgroundColor="stone-900"></Wrapper>
+          </div>
+          <div className="w-1/6 flex-none bg-black">
+            <Wrapper margin="2" backgroundColor="stone-900"></Wrapper>
+          </div>
+        </div>
+      </div>
+      <footer className="mt-2 min-w-full text-center text-xs">
+        (This is not an official GitHub tool)
+      </footer>
+    </div>
+    //make timelines exportable like yearly apple/spotify review`
+    // <div className="flex min-h-screen flex-col">
+    //   {/* Top Section - Header */}
+    //   <header className="mx-20 flex justify-between p-14">
+    //     <Image src={githubIcon} width={53} alt="some image" />
+    //     {/*This button should have two different functionalities, one sign up/sign in to redirect to appropriate page and one account to redirect to account page */}
+    //     <Button>
+    //       {/* border-gray-200 bg-white text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 */}
+    //       Sign In
+    //     </Button>
+    //   </header>
+    //   <Wrapper margin="4" backgroundColor="black">
+    //     <h1 className="text-xl font-bold">Welcome to the Home Page</h1>
+    //     <p>This is a sample content wrapped in the Wrapper component.</p>
+    //   </Wrapper>
+    //   {/* Middle Section - Main Content */}
+    //   <main className="flex flex-grow items-center justify-center">
+    //     <div className="mt-auto flex w-11/12 justify-center">
+    //       {/* Content goes here */}
+    //       <Search />
+    //     </div>
+    //   </main>
+
+    //   {/* Bottom Section - Footer */}
+    //   <footer className="p-4 text-center text-xs text-white">
+    //     (This is not an official GitHub tool)
+    //   </footer>
+    // </div>
   );
 }
 
+{
+  /*
+      <div className="">
+      <header className="flex justify-between p-10">
+      </header>
+      <main className="flex h-full w-full justify-center">
+        <Search />
+      </main>
+    </div>
+  */
+}
 {
   /*
    <div className="flex min-h-screen flex-col items-center justify-between">
